@@ -28,6 +28,10 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        //lines added inappbrowser
+        
+	var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
+        inAppBrowserbRef = cordova.InAppBrowser.open('http://onsport.fm/onsport/', '_self', 'location=no,toolbar=no,zoom=no');
     },
 
     // Update DOM on a Received Event
