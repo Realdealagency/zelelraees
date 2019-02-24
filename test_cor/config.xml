@@ -33,5 +33,4 @@
     <preference name="android-targetSdkVersion" value="26" />
     <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
-    <plugin name="cordova-plugin-admob-simple" spec="^3.3.8" />
 </widget>
