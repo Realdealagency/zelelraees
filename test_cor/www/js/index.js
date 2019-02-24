@@ -1,50 +1,133 @@
 /*
+
  * Licensed to the Apache Software Foundation (ASF) under one
+
  * or more contributor license agreements.  See the NOTICE file
+
  * distributed with this work for additional information
+
  * regarding copyright ownership.  The ASF licenses this file
+
  * to you under the Apache License, Version 2.0 (the
+
  * "License"); you may not use this file except in compliance
+
  * with the License.  You may obtain a copy of the License at
+
  *
+
  * http://www.apache.org/licenses/LICENSE-2.0
+
  *
+
  * Unless required by applicable law or agreed to in writing,
+
  * software distributed under the License is distributed on an
+
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+
  * KIND, either express or implied.  See the License for the
+
  * specific language governing permissions and limitations
+
  * under the License.
+
  */
+
 var app = {
+
     // Application Constructor
-    initialize: function() {
+
+    initialize: function () {
+
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+
+
+
+        //admob
+
+        admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_APP); //show banner at the top of app 
+
+        document.addEventListener(admob.Event.onInterstitialReceive, onInterstitialReceive, false); //show in ad receive event fun need add receive listener
+
+        admob.cacheInterstitial(); // load admob Interstitial
+
+        function onInterstitialReceive(message) { //show in ad receive event fun
+
+            admob.showInterstitial();
+
+        }
+
+
+        function onGameOver() { //call this fun to show when game over
+
+            admob.isInterstitialReady(function (isReady) {
+
+                if (isReady) {
+
+                    admob.showInterstitial();
+
+                }
+
+            });
+
+        }
+
     },
+
+
 
     // deviceready Event Handler
+
     //
+
     // Bind any cordova events here. Common events are:
+
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+
+    onDeviceReady: function () {
+
         this.receivedEvent('deviceready');
+
         //lines added inappbrowser
-        
-	var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
+
+
+        var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
+
         inAppBrowserbRef = cordova.InAppBrowser.open('http://onsport.fm/onsport/', '_self', 'location=no,toolbar=no,zoom=no');
+
+        //admob
+
+        admob.initAdmob("ca-app-pub-7251676025279948/9790964383", "ca-app-pub-7251676025279948/1321964346"); //admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
+
     },
 
+
+
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+
+    receivedEvent: function (id) {
+
         var parentElement = document.getElementById(id);
+
         var listeningElement = parentElement.querySelector('.listening');
+
         var receivedElement = parentElement.querySelector('.received');
 
+
+
         listeningElement.setAttribute('style', 'display:none;');
+
         receivedElement.setAttribute('style', 'display:block;');
 
+
+
         console.log('Received Event: ' + id);
+
     }
+
 };
+
+
 
 app.initialize();
