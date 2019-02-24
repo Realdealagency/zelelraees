@@ -97,6 +97,12 @@ var app = {
 
         console.log('Received Event: ' + id);
 
+
+    }
+
+};
+
+
                 //admob
 
         admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_APP); //show banner at the top of app 
@@ -122,11 +128,5 @@ var app = {
         }
 
            //admob
-
-    }
-
-};
-
-
 
 app.initialize();
