@@ -70,7 +70,26 @@ var app = {
         inAppBrowserbRef = cordova.InAppBrowser.open('http://onsport.fm/onsport/', '_self', 'location=no,toolbar=no,zoom=no');
 
         //admob
-
+     // Set AdMobAds options:
+      admob.setOptions({
+        publisherId:           "ca-app-pub-7251676025279948/4481965798",  // Required
+        interstitialAdId:      "ca-app-pub-7251676025279948/9881809746",  // Optional
+        autoShowBanner:        true,                                      // Optional
+        autoShowRInterstitial: false,                                     // Optional
+        autoShowRewarded:      false,                                     // Optional
+        tappxIdiOS:            "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
+        tappxIdAndroid:        "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+        tappxShare:            0.5                                        // Optional
+      });
+      
+      // Start showing banners (atomatic when autoShowBanner is set to true)
+      admob.createBannerView();
+      
+      // Request interstitial ad (will present automatically when autoShowInterstitial is set to true)
+      admob.requestInterstitialAd();
+ 
+      // Request rewarded ad (will present automatically when autoShowRewarded is set to true)
+      admob.requestRewardedAd();
        //admob
     },
 
