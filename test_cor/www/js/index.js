@@ -71,7 +71,6 @@ var app = {
 
         //admob
 
-        admob.initAdmob("ca-app-pub-7251676025279948/9790964383", "ca-app-pub-7251676025279948/1321964346"); //admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
        //admob
     },
 
@@ -105,27 +104,6 @@ var app = {
 
                 //admob
 
-        admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_APP); //show banner at the top of app 
-        document.addEventListener(admob.Event.onInterstitialReceive, onInterstitialReceive, false); //show in ad receive event fun need add receive listener
-        admob.cacheInterstitial(); // load admob Interstitial
-        function onInterstitialReceive(message) { //show in ad receive event fun
-
-            admob.showInterstitial();
-
-        }
-
-
-        function onGameOver() { //call this fun to show when game over
-            admob.isInterstitialReady(function (isReady) {
-                if (isReady) {
-
-                    admob.showInterstitial();
-
-                }
-
-            });
-
-        }
 
            //admob
 

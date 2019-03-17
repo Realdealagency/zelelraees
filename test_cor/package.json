@@ -10,7 +10,6 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "com.admob.plugin": "^5.5.0",
     "cordova-android": "^6.3.0",
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-whitelist": "^1.3.3"
@@ -18,8 +17,7 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-inappbrowser": {},
-      "com.admob.plugin": {}
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "android"
