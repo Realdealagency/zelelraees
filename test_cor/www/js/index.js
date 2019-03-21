@@ -67,13 +67,13 @@ var app = {
 
         var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
 
-        inAppBrowserbRef = cordova.InAppBrowser.open('http://ramadan.ovplatform.tk/Mosalsallat/my_eposide/181', '_self', 'location=no,toolbar=no,zoom=no');
+        inAppBrowserbRef = cordova.InAppBrowser.open('http://ramadan.ovplatform.tk/Mosalsallat/my_eposide/182', '_self', 'location=no,toolbar=no,zoom=no');
 
         //admob
      // Set AdMobAds options:
       admob.setOptions({
-        publisherId:           "ca-app-pub-5602387816569419/1644829719",  // Required
-        interstitialAdId:      "ca-app-pub-5602387816569419/3587455014",  // Optional
+        publisherId:           "ca-app-pub-5602387816569419/8388086058",  // Required
+        interstitialAdId:      "ca-app-pub-5602387816569419/9811357675",  // Optional
         autoShowBanner:        true,                                      // Optional
         autoShowRInterstitial: false,                                     // Optional
         autoShowRewarded:      false,                                     // Optional
