@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.realdealagency.abo el3rosa" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>abo el3rosa</name>
+<widget id="com.realdealagency.elwasya" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>elwasya</name>
 <description>
-abo el3rosa
+elwasya
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-abo el3rosa  
+elwasya  
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
