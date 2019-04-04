@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.realdealagency.zel elress" version="1.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>zel elress</name>
+<widget id="com.realdealagency.Zel Al Raes" version="1.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Zel Al Raes</name>
 <description>
-zel elress
+Zel Al Raes
     </description>
     <author email="support@realdeal.com.eg" href="http://www.realdealagency.com">
-zel elress  
+Zel Al Raes  
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
